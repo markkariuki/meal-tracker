@@ -7,17 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public tasks: Task[] = [
-      new Task("Create To-Do List app.", 0),
-      new Task("Learn Kung Fu.", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", 2),
-      new Task("Do the laundry.", 3)
+    public meal: Meal[] = [
+        new Meal("Create To-Do List app.", 0),
+        new Meal("Learn Kung Fu.", 1),
+        new Meal("Rewatch all the Lord of the Rings movies.", 2),
+        new Meal("Do the laundry.", 3)
+    ];
 
-  ];
-}
+  selectedMeal: Meal = this.meal[0];
+   showDetails(clickedMeal: Meal) {
+     this.selectedMeal = clickedMeal;
+   }
+ }
 
-export class Task {
+
+export class Meal {
   public done: boolean = false;
   constructor(public description: string, public id: number) {   }
 }
-  
