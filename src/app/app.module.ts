@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { MealsComponent } from './meals/meals.component';
+import { EditMealsComponent } from './edit-meals/edit-meals.component';
+import { NewMealsComponent } from './new-meals/new-meals.component';
+import { MealListsComponent } from './meal-lists/meal-lists.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MealsComponent,
+    EditMealsComponent,
+    NewMealsComponent,
+    MealListsComponent,
   ],
 
   imports: [
