@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Task } from '../meal.model';
+import { Meal } from '../meal.model';
 @Component({
   selector: 'app-new-meals',
   templateUrl: './new-meals.component.html',
