@@ -14,9 +14,12 @@ export class AppComponent {
         new Task("Do the laundry.", 3)
     ];
     selectedTask: Task = this.tasks[0];
-    showDetails(clickedTask: Task) {
-      this.selectedTask = clickedTask;
-    }
+   showDetails(clickedTask: Task) {
+     this.selectedTask = clickedTask;
+   }
+   finishedEditing() {
+     this.selectedTask = null;
+   }
 }
 
 export class Task {
