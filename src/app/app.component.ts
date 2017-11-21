@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'meal-tracker';
+  public task: Task = new Task("Create To-Do List app.", 0);
+
+}
+
+export class Task {
+  public done: boolean = false;
+  constructor(public description: string, public id: number) {   }
 }
