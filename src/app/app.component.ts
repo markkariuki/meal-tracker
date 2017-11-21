@@ -8,7 +8,7 @@ import { Meal } from './meal.model';
 export class AppComponent {
    title= 'meal tracker';
   public masterMealList: Meal[] = [
-    new Meal("chips", 400, "lunch")
+    new Meal("lunch", 400, "chips")
   ];
 
    selectedMeal: Meal = null;

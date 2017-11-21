@@ -1,7 +1,7 @@
 <div *ngFor="let currentMeal of childtaskMeal">
-  <h4>Each Meal Details</h4>
-  <p>Name of your meal: {{currentMeal.name}}</p>
-  <p>Calorie Count: kcal.{{currentMeal.calories}}</p>
-  <p>Meal Description: {{currentMeal.description}}</p>
+  <h4>Meal Details</h4>
+  <p>Name: {{currentMeal.name}}</p>
+  <p>Calorie : {{currentMeal.calories}}</p>
+  <p> Description: {{currentMeal.description}}</p>
   <button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button>
 </div>

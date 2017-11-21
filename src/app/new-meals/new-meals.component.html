@@ -6,16 +6,17 @@
 </div>
 <div>
    <label>Enter meal calories:</label>
-   <input #newCalories>
+   <input  type="number" #newCalories>
 </div>
 
    <div>
       <label>Enter meal type:</label>
       <input #newType>
-
+<div>
    <button (click)="addClicked(newDescription.value, newCalories.value, newType.value);
     newDescription.value='';
     newCalories.value='';
     newType.value='';
       ">Add</button>
+   </div>
 </div>
