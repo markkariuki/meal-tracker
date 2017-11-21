@@ -1,5 +1,7 @@
-<h3>Here are my favorite pies!</h3>
-<div *ngFor="let currentTask of childTaskList">
-     <h3>{{ currentTask.description }}</h3>
-     <button (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
-   </div>
+<div *ngFor="let currentMeal of childtaskMeal">
+  <h4>Each Meal Details</h4>
+  <p>Name of your meal: {{currentMeal.name}}</p>
+  <p>Calorie Count: kcal.{{currentMeal.calories}}</p>
+  <p>Meal Description: {{currentMeal.description}}</p>
+  <button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button>
+</div>
