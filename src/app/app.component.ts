@@ -6,9 +6,11 @@ import { Meal } from './meal.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+   title= 'meal tracker';
   public masterMealList: Meal[] = [
+    new Meal("chips", 400, "lunch")
+  ];
 
-   ];
    selectedMeal: Meal = null;
    showDetails(clickedMeal: Meal) {
      this.selectedMeal = clickedMeal;
@@ -16,7 +18,7 @@ export class AppComponent {
    finishedEditing() {
      this.selectedMeal = null;
    }
-   addTask(newMealFromChild: Meal) {
+   addMeal(newMealFromChild: Meal) {
    this.masterMealList.push(newMealFromChild);
  }
  }

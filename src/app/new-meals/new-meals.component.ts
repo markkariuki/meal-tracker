@@ -10,7 +10,6 @@ export class NewMealsComponent implements OnInit {
  addClicked(description: string, calories: number, type:string) {
       var newMealToAdd: Meal = new Meal(description, calories, type);
       this.newMealSender.emit(newMealToAdd);
-
     }
   constructor() { }
 

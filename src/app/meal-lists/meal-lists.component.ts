@@ -7,7 +7,7 @@ import { Meal } from '../meal.model';
   styleUrls: ['./meal-lists.component.css']
 })
 export class MealListsComponent implements OnInit {
-  @Input() childMealList: Meal[];
+  @Input() childtaskMeal: Meal[];
   @Output() clickSender = new EventEmitter();
   editButtonHasBeenClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);
