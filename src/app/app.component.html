@@ -8,4 +8,6 @@
     [childSelectedMeal]="selectedMeal"
     (doneClickedSender)="finishedEditing()"
 ></app-edit-meals>
-<app-new-meals></app-new-meals>
+<app-new-meals
+  (newMealSender)="addMeal($event)"
+></app-new-meals>

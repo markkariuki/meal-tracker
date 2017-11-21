@@ -8,10 +8,14 @@
    <label>Enter meal calories:</label>
    <input #newCalories>
 </div>
-<div>
+
    <div>
       <label>Enter meal type:</label>
       <input #newType>
-   </div>
-   <button (click)="addClicked(newDescription.value, newId.value)">Add</button>
+
+   <button (click)="addClicked(newDescription.value, newCalories.value, newType.value);
+    newDescription.value='';
+    newCalories.value='';
+    newType.value='';
+      ">Add</button>
 </div>

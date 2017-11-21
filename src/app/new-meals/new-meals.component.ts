@@ -6,8 +6,11 @@ import { Meal } from '../meal.model';
   styleUrls: ['./new-meals.component.css']
 })
 export class NewMealsComponent implements OnInit {
-  addClicked(description: string, id: number) {
-      var newMealToAdd: Meal = new Meal(description, id);
+  @Output() newMealSender = new EventEmitter();
+ addClicked(description: string, calories: number, type:string) {
+      var newMealToAdd: Meal = new Meal(description, calories, type);
+      this.newMealSender.emit(newMealToAdd);
+
     }
   constructor() { }
 

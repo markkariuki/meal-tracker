@@ -16,4 +16,7 @@ export class AppComponent {
    finishedEditing() {
      this.selectedMeal = null;
    }
+   addTask(newMealFromChild: Meal) {
+   this.masterMealList.push(newMealFromChild);
+ }
  }
