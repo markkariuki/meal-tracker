@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Task } from '../meal.model';
 
 @Component({
   selector: 'app-meal-lists',
@@ -6,10 +7,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meal-lists.component.css']
 })
 export class MealListsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+    @Input() childTaskList: Task[];
   }
-
-}
