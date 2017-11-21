@@ -1,15 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>{{title}}</h1>
-<app-meal-lists></app-meal-lists>
-<div *ngIf="selectedTask">
-    <h1>Edit Task</h1>
-    <div>
-      <label>Enter Task Description:</label>
-      <input [(ngModel)]="selectedTask.description">
-    </div>
-    <div>
-      <label>Enter Task ID:</label>
-      <input [(ngModel)]="selectedTask.id">
-      <button (click)="finishedEditing()">Done</button>
-    </div>
-  </div>
+<app-meal-lists
+[childTaskList]="masterTaskList"
+   (clickSender)="showDetails($event)"
+></app-meal-lists>
+<app-edit-meals
+    [childSelectedTask]="selectedTask"
+    (doneClickedSender)="finishedEditing()"
+></app-edit-meals>

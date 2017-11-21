@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Task } from '../meal.model';
 
 @Component({
@@ -7,5 +7,14 @@ import { Task } from '../meal.model';
   styleUrls: ['./meal-lists.component.css']
 })
 export class MealListsComponent implements OnInit {
-    @Input() childTaskList: Task[];
+  @Input() childTaskList: Task[];
+  @Output() clickSender = new EventEmitter();
+  editButtonHasBeenClicked(taskToEdit: Task) {
+    this.clickSender.emit(taskToEdit);
   }
+
+  constructor(){}
+
+  ngOnInit(){}
+
+}
