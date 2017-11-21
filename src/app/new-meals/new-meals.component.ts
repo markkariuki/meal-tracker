@@ -7,7 +7,7 @@ import { Task } from '../meal.model';
 })
 export class NewMealsComponent implements OnInit {
   addClicked(description: string, id: number) {
-      var newTaskToAdd: Task = new Task(description, id);
+      var newMealToAdd: Meal = new Meal(description, id);
     }
   constructor() { }
 

@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>{{title}}</h1>
 <app-meal-lists
-[childTaskList]="masterTaskList"
+[childMealList]="masterMealList"
    (clickSender)="showDetails($event)"
 ></app-meal-lists>
 <app-edit-meals
-    [childSelectedTask]="selectedTask"
+    [childSelectedMeal]="selectedMeal"
     (doneClickedSender)="finishedEditing()"
 ></app-edit-meals>
 <app-new-meals></app-new-meals>
