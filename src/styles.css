@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background-image: url(../src/app/edit-meals/i.jpg);
+  color: white;
+  text-align: center;
+}
