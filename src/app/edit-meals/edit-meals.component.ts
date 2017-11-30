@@ -5,15 +5,11 @@ import { Meal } from '../meal.model';
   templateUrl: './edit-meals.component.html',
   styleUrls: ['./edit-meals.component.css']
 })
-export class EditMealsComponent implements OnInit {
+export class EditMealsComponent  {
  @Input() childSelectedMeal: Meal;
- @Output() doneClickedSender = new EventEmitter();
+  @Output() doneClickedSender = new EventEmitter();
+
  doneClicked() {
-   this.doneClickedSender.emit();
- }
-  constructor() { }
-
-  ngOnInit() {
+  this.doneClickedSender.emit();
   }
-
-}
+ }

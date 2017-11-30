@@ -9,7 +9,7 @@ import { Meal } from '../meal.model';
 export class MealListsComponent implements OnInit {
   @Input() childtaskMeal: Meal[];
   @Output() clickSender = new EventEmitter();
-  editButtonHasBeenClicked(mealToEdit: Meal) {
+  editButtonHasBeenClicked(mealToEdit:Meal) {
     this.clickSender.emit(mealToEdit);
   }
 

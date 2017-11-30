@@ -1,17 +1,17 @@
 <div *ngIf="childSelectedMeal">
       <h1>Edit meal</h1>
       <div>
-        <label>Enter meal Description:</label>
-        <input [(ngModel)]="selectedMeal.description">
+        <label>Enter meal description:</label>
+        <input  [(ngModel)]="childSelectedMeal.description">
       </div>
       <div>
         <label>Enter meal calories:</label>
-        <input [(ngModel)]="selectedMeal.calories">
+        <input [(ngModel)]="childSelectedMeal.calories">
     </div>
     <div>
         <div>
           <label>Enter meal type:</label>
-          <input [(ngModel)]="selectedMeal.type">
+          <input [(ngModel)]="childSelectedMeal.type">
         </div>
         <button (click)="finishedEditing()">Done</button>
       </div>
