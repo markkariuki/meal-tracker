@@ -3,6 +3,7 @@
 <app-meal-lists
 [childtaskMeal]="masterMealList"
    (clickSender)="showDetails($event)"
+    (clickDelete)="deleteDetails($event)"
 ></app-meal-lists>
 <app-edit-meals
     [childSelectedMeal]="selectedMeal"
