@@ -12,10 +12,10 @@ export class MealListsComponent implements OnInit {
   editButtonHasBeenClicked(mealToEdit:Meal) {
     this.clickSender.emit(mealToEdit);
   }
-  
+
   @Output() clickDelete = new EventEmitter();
   deleteButtonHasBeenClicked(mealToEdit:Meal) {
-    this.clickSender.emit(mealToEdit);
+    this.clickDelete.emit(mealToEdit);
   }
 
   constructor(){}

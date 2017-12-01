@@ -15,9 +15,14 @@ export class AppComponent {
    showDetails(clickedMeal: Meal) {
      this.selectedMeal = clickedMeal;
    }
+   deleteDetails(deleteMeal: Meal){
+     var index:number= this.masterMealList.indexOf(deleteMeal);
+     this.masterMealList.splice(index,1);
+   }
    finishedEditing() {
      this.selectedMeal = null;
    }
+
    addMeal(newMealFromChild: Meal) {
    this.masterMealList.push(newMealFromChild);
  }
